@@ -27,6 +27,7 @@
     "nativeLanguage": "fr",
     "languages": [
       "fr"
-    ]
+    ],
+    "herokuAppName": "tournoidevincennes"
   }
 }
