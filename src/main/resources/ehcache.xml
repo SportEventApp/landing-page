@@ -20,5 +20,7 @@
 
     <cache alias="org.fmarin.tournoidevincennes.domain.User.persistentTokens" uses-template="simple"/>
 
+    <cache alias="org.fmarin.tournoidevincennes.domain.Prospect" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>
