@@ -5,6 +5,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
@@ -22,9 +23,10 @@ public class Prospect implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotNull
     @Email
     @Size(max = 100)
-    @Column(length = 100, unique = true)
+    @Column(length = 100, unique = true, nullable = false)
     private String email;
 
     public Long getId() {

@@ -37,8 +37,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = TournoidevincennesApp.class)
 public class ProspectResourceIntTest {
 
-    private static final String DEFAULT_EMAIL = "AAAAAAAAAA";
-    private static final String UPDATED_EMAIL = "BBBBBBBBBB";
+    private static final String DEFAULT_EMAIL = "aaaa@aa.com";
+    private static final String UPDATED_EMAIL = "bbbb@bb.com";
 
     @Inject
     private ProspectRepository prospectRepository;
