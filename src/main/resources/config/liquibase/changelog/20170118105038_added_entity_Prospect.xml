@@ -25,11 +25,34 @@
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="email" type="varchar(255)">
-                <constraints nullable="false" />
+                <constraints nullable="false"/>
             </column>
-            
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
-        
+
+    </changeSet>
+
+    <changeSet id="20170119165038-1" author="FMA">
+        <addColumn tableName="prospect">
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+
+        <addColumn tableName="prospect">
+            <column name="created_date" type="timestamp" defaultValueDate="${now}">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+
+        <addColumn tableName="prospect">
+            <column name="last_modified_by" type="varchar(50)"/>
+        </addColumn>
+
+        <addColumn tableName="prospect">
+            <column name="last_modified_date" type="timestamp"/>
+        </addColumn>
+
     </changeSet>
 </databaseChangeLog>

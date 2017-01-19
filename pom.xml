@@ -54,7 +54,8 @@
         <prometheus-simpleclient.version>0.0.18</prometheus-simpleclient.version>
         <run.addResources>false</run.addResources>
         <sonar-maven-plugin.version>3.2</sonar-maven-plugin.version>
-        <sonar.exclusions>src/main/webapp/content/**/*.*, src/main/webapp/bower_components/**/*.*, src/main/webapp/i18n/*.js, target/www/**/*.*</sonar.exclusions>
+        <sonar.exclusions>src/main/webapp/content/**/*.*, src/main/webapp/bower_components/**/*.*,
+            src/main/webapp/i18n/*.js, target/www/**/*.*</sonar.exclusions>
 
         <sonar.issue.ignore.multicriteria>S3437,UndocumentedApi,BoldAndItalicTagsCheck</sonar.issue.ignore.multicriteria>
         <sonar.issue.ignore.multicriteria.BoldAndItalicTagsCheck.resourceKey>src/main/webapp/app/**/*.*</sonar.issue.ignore.multicriteria.BoldAndItalicTagsCheck.resourceKey>
@@ -84,6 +85,12 @@
     </properties>
 
     <dependencies>
+        <!-- jhipster-needle-maven-add-dependency -->
+        <dependency>
+            <groupId>com.ecwid</groupId>
+            <artifactId>maleorang</artifactId>
+            <version>3.0-0.9.5</version>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-hibernate5</artifactId>
@@ -407,7 +414,6 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- jhipster-needle-maven-add-dependency -->
     </dependencies>
     <build>
         <defaultGoal>spring-boot:run</defaultGoal>
@@ -547,7 +553,8 @@
                             <version>[3.0.0,)</version>
                         </requireMavenVersion>
                         <requireJavaVersion>
-                            <message>You are running an older version of Java. JHipster requires at least JDK ${java.version}</message>
+                            <message>You are running an older version of Java. JHipster requires at least JDK
+                                ${java.version}</message>
                             <version>[${java.version}.0,)</version>
                         </requireJavaVersion>
                     </rules>
